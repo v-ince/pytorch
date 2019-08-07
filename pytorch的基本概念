@@ -12,10 +12,10 @@ pytorch简洁，入手相对于tensorflow容易
 3、python同样可以安装anoconda，也可以直接在官网下载python
 4、PIP就是一个python包管理工具，提供了对 Python 包的查找、下载、安装、卸载的功能，python管理器还需进一步了解，后续补充
 5、需要下载cuda和cudnn，然后再安装pytorch，注意版本一定要对应
-6、Tensor是PyTorch中重要的数据结构，可认为是一个高维数组。
-   outgrad：自动微分。深度学习的算法本质上是通过反向传播求导数，而PyTorch的autograd模块则实现了此功能。
+6、Tensor是PyTorch中重要的数据结构，可认为是一个高维数组。Tensor是神经网络框架中重要的基础数据类型，可以简单理解为N维数组的容器对象。Tensor之间的通过运算进行连接，从而形成计算图。
+   outgrad：自动微分。深度学习的算法本质上是通过反向传播求导数，而PyTorch的autograd模块则实现了此功能。PyTorch 中所有神经网络的核心是 autograd 包。autograd包为张量上的所有操作提供了自动求导。
    torch.nn是专门为神经网络设计的模块化接口。nn构建于 Autograd之上，可用来定义和运行神经网络。
-   nn.Module是nn中最重要的类，可把它看成是一个网络的封装，包含网络各层定义以及forward方法
+   nn.Module是nn中最重要的类，可把它看成是一个网络的封装，包含网络各层定义以及forward方法。torch.nn模块提供了创建神经网络的基础构件，这些层都继承自Module类。当实现神经网络时需要继承自此模块，并在初始化函数中创建网络需要包含的层，并实现forward函数完成前向计算，网络的反向计算会由自动求导机制处理。
    nn实现了神经网络中大多数的损失函数，例如nn.MSELoss用来计算均方误差，nn.CrossEntropyLoss用来计算交叉熵损失。
 7、（1）、数据加载及预处理
    （2）、定义网络
